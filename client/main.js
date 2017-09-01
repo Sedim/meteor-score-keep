@@ -1,7 +1,9 @@
-//import './../imports/utils'
-import aDefaultVar, {greetUser, name} from './../imports/utils'
-import addit from '../imports/math'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import {meteor} from 'meteor/meteor'
 
-console.log('from /client/main.js')
-console.log(greetUser(), name, addit(4, 6, 7))
-console.log (aDefaultVar)
+Meteor.startup( function () {
+    let name = 'Sedim'
+    let jsx = <p>This is from {name}</p>
+    ReactDOM.render(jsx, document.getElementById('app'))
+})
