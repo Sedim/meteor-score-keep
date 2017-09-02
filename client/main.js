@@ -4,6 +4,11 @@ import { meteor } from 'meteor/meteor';
 
 import {Players} from '../imports/api/players';
 
+Tracker.autorun(()=> console.log('Players list', Players.find().fetch()));
+// Tracker.autorun(function () {
+//     console.log('Players list', Players.find().fetch());
+//   });
+  
 const players = [{
     _id: '1',
     name: 'Lauren',
