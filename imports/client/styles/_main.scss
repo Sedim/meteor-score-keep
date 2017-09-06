@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; // precentage of the default font which is 16pt 
+                    // so 0.625 * 16 =10 pt is now the default
+                    // so now when we use the 'rem' unit below it is 24pt
+                    // which makes us use 'rem' easier and its better than
+                    // 'pt' (points) becuase it scales much better
+}
+
+body {
+  color: #555555;
+  font-family: Helvetica, Arial, sans-serif; // if Helevetica not available then Arial then Sans
+}
+
+h1 {
+  font-weight: 300;   // thickness of font
+  font-size: 2.4rem;  // relative to the default html font size above 
+                      // so now its 24pixels
+}
+
+@import './components/title-bar';
+@import './components/wrapper';
